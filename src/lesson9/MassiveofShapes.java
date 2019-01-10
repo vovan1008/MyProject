@@ -15,5 +15,7 @@ public class MassiveofShapes {
         System.out.println(circle1);
         System.out.println(circle2);
         System.out.println(rectangle1);
+        System.out.println(((Circle) circle1).square());
+        System.out.println(((Circle) circle1).lengthOfCircle());
     }
 }

@@ -17,6 +17,7 @@ public class Magazine implements Printable {
         this.name = name;
     }
 
+
     @Override
     public void print() {
         System.out.println("Print magazine " + getName());
@@ -40,5 +41,12 @@ public class Magazine implements Printable {
         return "Magazine{" +
                 "name='" + name + '\'' +
                 '}';
+    }
+    public static void printMagazines(Printable [] printables) {
+        for (Printable printable : printables) {
+            if (printable instanceof Magazine) {
+                System.out.println(((Magazine) printable).getName());
+            }
+        }
     }
 }

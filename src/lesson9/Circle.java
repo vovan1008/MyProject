@@ -4,6 +4,7 @@ import java.util.Objects;
 
 public class Circle extends Shape {
     private int x, y, radius;
+    static double PI=3.14;
 
     public Circle(String color, int x, int y, int radius) {
         super(color);
@@ -65,4 +66,11 @@ public class Circle extends Shape {
                 ", radius=" + radius +
                 "} " + super.toString();
     }
+    public double square(){
+        return PI*(radius*radius);
+    }
+    public double lengthOfCircle(){
+        return 2*PI*radius;
+    }
+
 }
