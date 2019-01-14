@@ -12,6 +12,12 @@ public class Person {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return String.format( "Person{ fullName='%s' , age=%d }"
+                ,fullName,age);
+    }
+
     void move() {
         System.out.println();
     }

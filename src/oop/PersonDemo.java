@@ -8,6 +8,7 @@ public class PersonDemo {
         myPerson1.talk("hello");
         myPerson1.move();
         myPerson2.talk("hello");
+        System.out.println(myPerson2);
 
     }
 }
