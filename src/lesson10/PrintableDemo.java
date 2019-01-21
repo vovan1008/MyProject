@@ -14,5 +14,12 @@ public class PrintableDemo {
         }
         Magazine.printMagazines(printables);
         Book.printBooks(printables);
+
+        Printable newspaper = ()-> System.out.println("Print newspaper");
+
+        Printable[] printables1 = {newspaper, book1,magazine1};
+        for(Printable p:printables1){
+            p.print();
+        }
     }
 }
