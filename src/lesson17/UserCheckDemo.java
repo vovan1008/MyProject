@@ -8,23 +8,22 @@ public class UserCheckDemo {
         System.out.println(verify("login", "password1paspasasp", "password1"));
     }
 
-    public static boolean verify(String login, String password, String confPassword){
+    public static boolean verify(String login, String password, String confPassword) {
 
         try {
             if (login.length() > 20) {
                 throw new WrongLoginException("Login length > 20");
             }
-            if(password.length()>20 || !password.equals(confPassword)){
+            if (password.length() > 20 || !password.equals(confPassword)) {
                 throw new WrongPasswordException("Wrong password");
             }
-        } catch (WrongLoginException e) {
+        } catch (WrongLoginException | WrongPasswordException e) {
             System.out.println(e.getMessage());
             return false;
-        } catch (WrongPasswordException e) {
-            System.out.println(e.getMessage());
-            return false;
+        } finally {
+            System.out.printf("Login %s, password %s, confirm password %s%n", login, password, confPassword);
         }
         return true;
-        }
     }
+}
 
